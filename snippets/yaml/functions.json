@@ -1,0 +1,13 @@
+{
+    "Serverless Basic Function": {
+        "prefix": "sls-fun",
+        "body": [
+          "${1}:",
+          "  handler: src/function/${1}.handler",
+          "  name: ${2}",
+          "  events:",
+          "    $3"
+        ],
+        "description": "Serverless Generic Function"
+    }
+}

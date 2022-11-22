@@ -1,0 +1,30 @@
+{
+  "name": "serverless-snippets",
+  "version": "0.0.0-development",
+  "description": "Code snippets for Serverless Applications",
+  "main": "index.js",
+  "publisher": "distinction-dev",
+  "icon": "images/icon.png",
+  "displayName": "Serverless Snippets",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/distinction-dev/serverless-snippets"
+  },
+  "engines": {
+    "vscode": "^0.10.0"
+  },
+  "categories": ["Snippets"],
+  "author": "Himanshu Pant",
+  "license": "MIT",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "yaml",
+        "path": "./snippets/yaml.json"
+      }
+    ]
+  }
+}
