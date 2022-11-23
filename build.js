@@ -17,6 +17,7 @@ function compileSnippets(snippets, outFile, scope) {
             })
         }
         result = {
+            ...result,
             ...s
         }
     })
