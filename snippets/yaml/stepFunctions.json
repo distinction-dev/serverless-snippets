@@ -1,0 +1,16 @@
+{
+    "Invoke Another SM Sync": {
+        "prefix": "sls-sub-workflow",
+        "body": [
+            "Type: Task",
+            "Resource: arn:aws:states:::states:startExecution.sync",
+            "Parameters:",
+            "  StateMachineArn:",
+            "    Ref: ${1}",
+            "  Input:",
+            "    NeedCallback: false",
+            "    AWS_STEP_FUNCTIONS_STARTED_BY_EXECUTION_ID: $$.Execution.Id"
+        ],
+        "description": "Task step to invoke another state machine synchronously"
+    }
+}
