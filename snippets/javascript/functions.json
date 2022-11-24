@@ -1,0 +1,17 @@
+{
+    "Serverless Function Handler": {
+        "prefix": "sls-handler",
+        "body": [
+            "/**",
+            " * ${2}",
+            " * @param {import('aws-lambda').${1}} event",
+            " * @param {import('aws-lambda').Context} context",
+            " */",
+            "module.exports.handler = async (event, context) => {",
+            "${3}",
+            "}"
+        ],
+        "description": "Lambda Function handler",
+        "details": "This will create a lambda handler in javascript files. The first focus will be on event type. The user should be able to just start typing the type of the event from aws-lambda types. The second is in the jsdoc to add description of what this handler does"
+    }
+}

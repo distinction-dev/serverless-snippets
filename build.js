@@ -38,8 +38,19 @@ function buildYaml() {
     // copy to .vscode as well
 }
 
+/**
+ * This function scans the yaml directory in snippets directory and combines them into a single json file
+ */
+function buildJavascript() {
+    const files = fs.readdirSync(path.join(__dirname, "snippets", "javascript"))
+        .map(f => path.join(__dirname, "snippets", "javascript", f))
+    compileSnippets(files, "javascript.json", "javascript")
+    // copy to .vscode as well
+}
+
 function run() {
     buildYaml()
+    buildJavascript()
 }
 
 if (require.main === module) {
