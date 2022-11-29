@@ -1,0 +1,32 @@
+{
+    "Middy Http Handler": {
+        "prefix": "mi-http",
+        "body": [
+            "import middy from '@middy/core'",
+            "import jsonBodyParser from '@middy/http-json-body-parser'",
+            "import httpErrorHandler from '@middy/http-error-handler'",
+            "import validator from '@middy/validator'",
+            "const lambdaHandler = async (event, context) => {",
+            "  ${3}",
+            "}",
+            "const eventSchema = {",
+            "  type: 'object',",
+            "  properties: {",
+            "    body: {",
+            "      type: 'object',",
+            "      properties: {",
+            "        ${1}",
+            "      },",
+            "      required: [${2}]",
+            "    }",
+            "  }",
+            "}",
+            "const handler = middy()",
+            "  .use(jsonBodyParser())",
+            "  .use(validator({eventSchema}))",
+            "  .use(httpErrorHandler())",
+            "  .handler(lambdaHandler)"
+        ],
+        "description": "Middy Http handler"
+    }
+}
