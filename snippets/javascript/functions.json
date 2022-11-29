@@ -8,7 +8,11 @@
             " * @param {import('aws-lambda').Context} context",
             " */",
             "module.exports.handler = async (event, context) => {",
-            "${3}",
+            "  try {",
+            "    ${3}",
+            "  } catch(err) {",
+            "    ${4}",
+            "  }",
             "}"
         ],
         "description": "Lambda Function handler",
